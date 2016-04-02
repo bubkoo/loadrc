@@ -44,6 +44,6 @@ var config = loadrc.load(basename, rootDir);
 // - .congifrc.json
 // - .congifrc
 // - load "package.json" and return "config" section
-var config = loadrc.load('config');
+var config = loadrc.load('configrc');
 ```
 
