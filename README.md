@@ -29,7 +29,7 @@ Many NodeJS modules have a `**rc**` [file](http://stackoverflow.com/questions/11
 $ npm install loadrc --save
 ```
 
-## Useage
+## Usage
 
 ```js
 var loadrc = require('loadrc');
