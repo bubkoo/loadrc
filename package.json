@@ -1,6 +1,6 @@
 {
   "name": "loadrc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Load runtime configuration files for your module",
   "main": "index.js",
   "scripts": {
