@@ -4,14 +4,14 @@
 > Load runtime configuration files for your module
 
 
-Many NodeJS modules have a `"rc"` [file](http://stackoverflow.com/questions/11030552/what-does-rc-mean-in-dot-files), such as `".babelrc"`, `".eslintrc.yml"`, etc. We can use `loadrc` parsing your `"rc"` file to JavaScript object.
+Many NodeJS modules have a `rc` [file](http://stackoverflow.com/questions/11030552/what-does-rc-mean-in-dot-files), such as `.babelrc`, `.eslintrc.yml`, etc. We can use `loadrc` parsing your `"rc"` file to JavaScript object.
 
 **Supported files:**
 
 - JavaScript Module
 - Yaml file
 - JSON file
-- Legacy file, such as `".config"`
+- Legacy file, such as `.config`
 - package.json
 
 
@@ -38,7 +38,7 @@ var config = loadrc.load(basename, rootDir);
 // - .congif.yml
 // - .congif.json
 // - .congif
-// - try to load "package.json" and return "config" section
+// - load "package.json" and return "config" section
 
 var config = loadrc.load('config');
 ```

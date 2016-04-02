@@ -1,7 +1,7 @@
 var fs         = require('fs');
 var path       = require('path');
 var yaml       = require('js-yaml');
-var strip      = require('strip-json-comments');
+var stripMe    = require('strip-json-comments');
 var isAbsolute = require('path-is-absolute');
 
 
@@ -27,7 +27,7 @@ function loadYAMLConfig(filePath) {
 
 function loadJSONConfig(filePath) {
   try {
-    return JSON.parse(strip(readFile(filePath)));
+    return JSON.parse(stripMe(readFile(filePath)));
   } catch (e) {
     return false;
   }
@@ -35,7 +35,7 @@ function loadJSONConfig(filePath) {
 
 function loadLegacyConfig(filePath) {
   try {
-    return yaml.safeLoad(strip(readFile(filePath))) || {};
+    return yaml.safeLoad(stripMe(readFile(filePath))) || {};
   } catch (e) {
     return false;
   }
