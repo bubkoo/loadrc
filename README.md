@@ -1,6 +1,5 @@
-# loadrc
-[![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/bubkoo/loadrc/blob/master/LICENSE)
-[![NPM](https://nodei.co/npm/loadrc.png)](https://nodei.co/npm/loadrc/)
+# loadrc [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/bubkoo/loadrc/blob/master/LICENSE) [![npm:](https://img.shields.io/npm/v/loadrc.svg?style=flat-square)](https://www.npmjs.com/packages/loadrc)
+
 
 > Load runtime configuration files for your module
 
