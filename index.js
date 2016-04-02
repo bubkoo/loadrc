@@ -52,6 +52,10 @@ function loadPackageConfig(filePath, baseName) {
 
 exports.load = function (baseName, root) {
 
+  if(!baseName){
+    throw new Error('The "basename" should be specified.')
+  }
+
   var cwd = process.cwd();
 
   root = root || cwd;
@@ -64,12 +68,12 @@ exports.load = function (baseName, root) {
   var result = null;
 
   [
-    loadJSConfig.bind(null, legacy + 'rc.js'),
-    loadYAMLConfig.bind(null, legacy + 'rc.yaml'),
-    loadYAMLConfig.bind(null, legacy + 'rc.yml'),
-    loadJSONConfig.bind(null, legacy + 'rc.json'),
-    loadLegacyConfig.bind(null, legacy + 'rc'),
-    loadPackageConfig.bind(null, path.join(cwd, 'package.json'), baseName),
+    loadJSConfig.bind(null, legacy + '.js'),
+    loadYAMLConfig.bind(null, legacy + '.yaml'),
+    loadYAMLConfig.bind(null, legacy + '.yml'),
+    loadJSONConfig.bind(null, legacy + '.json'),
+    loadLegacyConfig.bind(null, legacy),
+    loadPackageConfig.bind(null, path.join(cwd, 'package.json'), baseName.substr(0, baseName.length - 2)),
   ].some(function (loadConfig) {
     result = loadConfig();
     if (result) {
