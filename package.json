@@ -1,0 +1,36 @@
+{
+  "name": "loadrc",
+  "version": "0.0.1",
+  "description": "Load runtime configuration for NodeJS modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    name: "bubkoo",
+    email: "bubkoo@163.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "rc",
+    "dotfile",
+    "dot",
+    "runtime",
+    "configuration",
+    "graphics",
+    "fonts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubkoo/loadrc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bubkoo/loadrc/issues"
+  },
+  "homepage": "https://github.com/bubkoo/loadrc#readme",
+  "dependencies": {
+    "js-yaml": "^3.5.5",
+    "path-is-absolute": "^1.0.0",
+    "strip-json-comments": "^2.0.1"
+  }
+}
