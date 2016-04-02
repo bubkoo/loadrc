@@ -16,9 +16,7 @@
     "dotfile",
     "dot",
     "runtime",
-    "configuration",
-    "graphics",
-    "fonts"
+    "configuration"
   ],
   "repository": {
     "type": "git",
