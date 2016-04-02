@@ -38,11 +38,11 @@ var config = loadrc.load(basename, rootDir);
 // example
 // -------
 // try to load these files order by order: 
-// - .congif.js
-// - .congif.yaml
-// - .congif.yml
-// - .congif.json
-// - .congif
+// - .congifrc.js
+// - .congifrc.yaml
+// - .congifrc.yml
+// - .congifrc.json
+// - .congifrc
 // - load "package.json" and return "config" section
 var config = loadrc.load('config');
 ```
