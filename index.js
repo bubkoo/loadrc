@@ -56,8 +56,10 @@ function endWith(str, suffix) {
   return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
 
-function fixBaseName(baseName) {
 
+exports.load = function (baseName, root) {
+
+  // fix basename
   if (!baseName) {
     throw new Error('The "basename" should be specified.')
   }
@@ -66,29 +68,14 @@ function fixBaseName(baseName) {
     baseName += 'rc';
   }
 
-  return baseName;
-}
-
-function fixRoot(root) {
-
+  // fix root
   var cwd = process.cwd();
 
   if (!root) {
-    return cwd;
-  }
-
-  if (!isAbsolute(root)) {
+    root = cwd;
+  } else if (!isAbsolute(root)) {
     root = path.resolve(cwd, root);
   }
-
-  return root;
-}
-
-
-exports.load = function (baseName, root) {
-
-  baseName = fixBaseName(baseName);
-  root     = fixRoot(root);
 
   var legacy = path.join(root, '.' + baseName);
   var result = null;
