@@ -49,20 +49,46 @@ function loadPackageConfig(filePath, baseName) {
   }
 }
 
+function endWith(str, suffix) {
 
-exports.load = function (baseName, root) {
+  str = '' + str;
 
-  if(!baseName){
+  return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+function fixBaseName(baseName) {
+
+  if (!baseName) {
     throw new Error('The "basename" should be specified.')
   }
 
+  if (!endWith(baseName, 'rc')) {
+    baseName += 'rc';
+  }
+
+  return baseName;
+}
+
+function fixRoot(root) {
+
   var cwd = process.cwd();
 
-  root = root || cwd;
+  if (!root) {
+    return cwd;
+  }
 
   if (!isAbsolute(root)) {
     root = path.resolve(cwd, root);
   }
+
+  return root;
+}
+
+
+exports.load = function (baseName, root) {
+
+  baseName = fixBaseName(baseName);
+  root     = fixRoot(root);
 
   var legacy = path.join(root, '.' + baseName);
   var result = null;
