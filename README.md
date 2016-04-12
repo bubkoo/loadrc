@@ -1,15 +1,12 @@
 # loadrc 
 
+> Load runtime configuration files for your module.
+
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/bubkoo/loadrc/blob/master/LICENSE) 
 
-[![npm:](https://img.shields.io/npm/v/loadrc.svg?style=flat-square)](https://www.npmjs.com/packages/loadrc)
-[![downloads:?](https://img.shields.io/npm/dm/loadrc.svg?style=flat-square)](https://www.npmjs.com/packages/loadrc)
-[![dependencies:?](https://img.shields.io/david/bubkoo/loadrc.svg?style=flat-square)](https://david-dm.org/bubkoo/loadrc)
+Many NodeJS modules have `**rc**` [files](http://stackoverflow.com/questions/11030552/what-does-rc-mean-in-dot-files), such as `.babelrc`, `.eslintrc.yml`, etc. 
 
-> Load runtime configuration files for your module
-
-
-Many NodeJS modules have a `**rc**` [file](http://stackoverflow.com/questions/11030552/what-does-rc-mean-in-dot-files), such as `.babelrc`, `.eslintrc.yml`, etc. We can use `loadrc` to parse your `rc` file into JavaScript object.
+Use `loadrc` to parse your `rc` files into JavaScript object.
 
 **Supported files:**
 
@@ -20,7 +17,7 @@ Many NodeJS modules have a `**rc**` [file](http://stackoverflow.com/questions/11
 - package.json
 
 
-`loadrc` will try to load these files by the listed order, and stop **until** any of them loaded.
+`loadrc` will try to load these files by the listed order, stop **until** any of them loaded.
 
  
 ## Install
@@ -47,3 +44,8 @@ var config = loadrc.load(basename, rootDir);
 var config = loadrc.load('configrc');
 ```
 
+# Contributing
+ 
+Pull requests and stars are highly welcome. 
+
+For bugs and feature requests, please [create an issue](https://github.com/bubkoo/loadrc/issues).
