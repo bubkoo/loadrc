@@ -6,18 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": {
-    "name": "bubkoo",
-    "email": "bubkoo@163.com"
-  },
-  "license": "MIT",
   "keywords": [
+    "load",
+    "configuration",
+    "config",
     "rc",
+    "package",
+    "module",
     "dotfile",
     "dot",
-    "runtime",
-    "configuration"
+    "runtime"
   ],
+  "author": {
+    "name": "bubkoo",
+    "email": "bubkoo.wy@gmail.com"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bubkoo/loadrc.git"
